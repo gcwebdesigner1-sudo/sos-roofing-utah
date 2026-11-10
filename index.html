@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SOS Roofing Utah | Roy &amp; Northern Wasatch Front Roofers</title>
+<meta name="description" content="Family-owned roofers in Roy, Utah since 1991. Roof replacement, repair, insurance claims and storm damage from North Salt Lake to Brigham City. Free quotes: (801) 564-2068.">
+<meta name="theme-color" content="#0a1628">
+<meta property="og:title" content="SOS Roofing Utah">
+<meta property="og:description" content="Family-owned roofers in Roy, Utah since 1991. Free quotes: (801) 564-2068.">
+<meta property="og:image" content="img/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/eagle.png">
+<link rel="apple-touch-icon" href="img/eagle.png">
+<link rel="preload" as="image" href="img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "SOS Roofing Utah",
+  "telephone": "+1-801-564-2068",
+  "url": "https://sosroofingutah.com/",
+  "image": "img/hero.jpg",
+  "foundingDate": "1991",
+  "address": {"@type": "PostalAddress", "addressLocality": "Roy", "addressRegion": "UT", "postalCode": "84067", "addressCountry": "US"},
+  "areaServed": ["Roy","Ogden","North Ogden","South Ogden","Layton","Kaysville","Syracuse","Clearfield","Clinton","Bountiful","Centerville","Pleasant View","Plain City","Harrisville","West Haven","Willard","Perry","Brigham City","North Salt Lake"],
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "34"},
+  "sameAs": ["https://www.facebook.com/sosroofingutah"]
+}
+</script>
+<style>
+:root{
+  --navy:#0a1628;
+  --navy-2:#11223d;
+  --ink:#0d1726;
+  --red:#d0202e;
+  --red-dark:#a81623;
+  --cream:#f6f2eb;
+  --paper:#ffffff;
+  --muted:#5b6575;
+  --line:#e4ded3;
+  --gold:#f2b632;
+  --radius:14px;
+  --gutter:16px;
+  --display:"Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
+  --body:"Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.55;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 var(--gutter)}
+@media (min-width:768px){:root{--gutter:32px}}
+section{scroll-margin-top:64px}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .35s ease, box-shadow .35s ease;padding-top:env(safe-area-inset-top)}
+.nav.solid{background:rgba(10,22,40,.96);box-shadow:0 6px 24px rgba(0,0,0,.25);backdrop-filter:blur(8px)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brand img{width:40px;height:40px;object-fit:contain}
+.brand span{font-family:var(--display);font-weight:900;font-size:22px;letter-spacing:.04em;text-transform:uppercase}
+.links{display:none;list-style:none;gap:26px;align-items:center}
+.links a{color:#fff;text-decoration:none;font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;opacity:.9}
+.links a:hover{opacity:1;color:var(--gold)}
+.links .cta{background:var(--red);padding:10px 18px;border-radius:999px;opacity:1}
+.links .cta:hover{background:var(--red-dark);color:#fff}
+.burger{width:44px;height:44px;border:0;background:transparent;display:grid;place-items:center;cursor:pointer}
+.burger i{display:block;width:24px;height:2px;background:#fff;position:relative;transition:transform .3s}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:24px;height:2px;background:#fff;transition:transform .3s, top .3s}
+.burger i::before{top:-7px}.burger i::after{top:7px}
+.menu-open .burger i{background:transparent}
+.menu-open .burger i::before{top:0;transform:rotate(45deg)}
+.menu-open .burger i::after{top:0;transform:rotate(-45deg)}
+.drawer{position:fixed;inset:0;background:var(--navy);z-index:40;display:flex;flex-direction:column;justify-content:center;padding:80px 28px 40px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.2,1)}
+.menu-open .drawer{transform:none}
+.drawer a{color:#fff;text-decoration:none;font-family:var(--display);font-weight:800;font-size:40px;text-transform:uppercase;line-height:1.25;letter-spacing:.02em}
+.drawer a:active{color:var(--gold)}
+.drawer .d-call{margin-top:28px;font-family:var(--body);font-size:20px;font-weight:700;color:var(--gold)}
+@media (min-width:960px){.links{display:flex}.burger,.drawer{display:none}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;color:#fff;display:grid;place-items:center;text-align:center;background:var(--navy)}
+.hero-bg{position:absolute;inset:-6% 0 0 0;will-change:transform}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;animation:heroZoom 9s cubic-bezier(.2,.6,.2,1) both}
+@keyframes heroZoom{from{transform:scale(1.22)}to{transform:scale(1.04)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:
+  radial-gradient(ellipse 75% 50% at 50% 48%, rgba(10,22,40,.55), rgba(10,22,40,.0) 75%),
+  linear-gradient(180deg, rgba(10,22,40,.75) 0%, rgba(10,22,40,.25) 35%, rgba(10,22,40,.45) 70%, rgba(10,22,40,.95) 100%)}
+.hero-in{position:relative;z-index:2;padding:0 var(--gutter);will-change:transform,opacity}
+.h-name{font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.82;letter-spacing:.01em;text-shadow:0 8px 40px rgba(0,0,0,.55)}
+.h-sos{display:block;font-size:clamp(132px,42vw,320px);color:#fff;letter-spacing:.02em;text-shadow:.035em .035em 0 var(--red),.07em .07em 0 rgba(10,22,40,.55),0 .12em .35em rgba(0,0,0,.55)}
+.h-roof{display:inline-block;font-size:clamp(44px,13vw,108px);letter-spacing:.08em;margin-top:.12em;padding:.06em .32em .02em .4em;background:var(--red);color:#fff;text-shadow:none;box-shadow:0 14px 34px rgba(208,32,46,.45);transform:skewX(-6deg)}
+.h-roof > span{display:inline-block;transform:skewX(6deg)}
+.h-utah{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:16px;font-family:var(--body);font-weight:700;font-size:clamp(14px,3.6vw,18px);letter-spacing:.5em;text-transform:uppercase;color:#fff;padding-left:.5em}
+.h-utah::before,.h-utah::after{content:"";width:clamp(28px,10vw,70px);height:2px;background:var(--red)}
+.hero-actions{margin-top:clamp(28px,6vh,44px);display:flex;flex-direction:column;align-items:center;gap:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;border:0;cursor:pointer;border-radius:999px;transition:transform .2s, background .2s, box-shadow .2s}
+.btn-red{background:var(--red);color:#fff;padding:18px 34px;font-size:17px;box-shadow:0 12px 30px rgba(208,32,46,.45)}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
+.h-phone{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:700;font-size:clamp(22px,6vw,28px);letter-spacing:.03em;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.h-phone svg{width:24px;height:24px;fill:var(--gold)}
+.reveal-1,.reveal-2,.reveal-3,.reveal-4{opacity:0;transform:translateY(26px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+.reveal-1{animation-delay:.25s}.reveal-2{animation-delay:.55s}.reveal-3{animation-delay:.85s}.reveal-4{animation-delay:1.1s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* ---------- SHARED ---------- */
+.eyebrow{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+h2{font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.95;font-size:clamp(40px,10vw,72px);letter-spacing:.01em}
+.lead{font-size:clamp(17px,2.2vw,19px);color:var(--muted);max-width:60ch}
+.pad{padding:clamp(72px,12vw,130px) 0}
+
+/* ---------- STATS ---------- */
+.stats{background:var(--navy);color:#fff;padding:34px 0;border-top:4px solid var(--red)}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px 16px}
+.stat b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(40px,10vw,60px);line-height:1;color:#fff}
+.stat b em{font-style:normal;color:var(--gold)}
+.stat span{font-size:14px;letter-spacing:.08em;text-transform:uppercase;opacity:.75;font-weight:600}
+@media (min-width:768px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* ---------- ABOUT ---------- */
+.about-grid{display:grid;gap:40px;align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);box-shadow:0 30px 60px -20px rgba(10,22,40,.45)}
+.about-img .tag{position:absolute;left:-6px;bottom:-18px;background:var(--red);color:#fff;font-family:var(--display);font-weight:800;font-size:22px;text-transform:uppercase;padding:12px 18px;border-radius:10px;letter-spacing:.04em;box-shadow:0 12px 24px rgba(0,0,0,.2)}
+.about-copy p{margin-top:18px;color:#36404f}
+.checks{list-style:none;margin-top:24px;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start;font-weight:600}
+.checks li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6 11-11-1.4-1.4z'/%3E%3C/svg%3E") center/16px no-repeat}
+@media (min-width:900px){.about-grid{grid-template-columns:1.05fr 1fr;gap:70px}}
+
+/* ---------- SERVICES ---------- */
+.services{background:var(--paper)}
+.svc-head{display:flex;flex-direction:column;gap:14px;margin-bottom:40px}
+.svc-grid{display:grid;gap:18px}
+.svc{position:relative;border-radius:var(--radius);overflow:hidden;min-height:260px;color:#fff;display:flex;align-items:flex-end;isolation:isolate}
+.svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s ease}
+.svc::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,22,40,0) 25%,rgba(10,22,40,.92) 100%)}
+.svc:hover img{transform:scale(1.06)}
+.svc div{padding:22px}
+.svc h3{font-family:var(--display);font-weight:800;font-size:30px;text-transform:uppercase;line-height:1;letter-spacing:.02em}
+.svc p{margin-top:8px;font-size:15.5px;opacity:.9}
+@media (min-width:700px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1024px){.svc-grid{grid-template-columns:repeat(3,1fr)}.svc{min-height:340px}}
+
+/* ---------- PROCESS (scroll-linked line) ---------- */
+.process{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.process h2{color:#fff}
+.process .lead{color:rgba(255,255,255,.72)}
+.steps{position:relative;margin-top:48px;display:grid;gap:34px;padding-left:44px}
+.track{position:absolute;left:15px;top:6px;bottom:6px;width:3px;background:rgba(255,255,255,.12);border-radius:3px}
+.track i{position:absolute;inset:0 0 auto 0;height:100%;background:var(--red);transform-origin:top;transform:scaleY(var(--p,0));border-radius:3px}
+.step{position:relative}
+.step .dot{position:absolute;left:-44px;top:0;width:33px;height:33px;border-radius:50%;background:var(--navy);border:3px solid rgba(255,255,255,.25);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:17px;transition:background .3s,border-color .3s}
+.step.on .dot{background:var(--red);border-color:var(--red)}
+.step h3{font-family:var(--display);font-weight:800;font-size:30px;text-transform:uppercase;line-height:1.05}
+.step p{margin-top:8px;color:rgba(255,255,255,.75);max-width:56ch}
+.step ul{margin:10px 0 0 18px;color:rgba(255,255,255,.75)}
+.proc-grid{display:grid;gap:50px}
+.proc-photos{display:none}
+@media (min-width:960px){
+  .proc-grid{grid-template-columns:1.1fr .9fr;gap:70px;align-items:start}
+  .proc-photos{display:grid;gap:16px;position:sticky;top:100px}
+  .proc-photos img{border-radius:var(--radius);width:100%;aspect-ratio:4/3;object-fit:cover}
+}
+
+/* ---------- WORK GALLERY ---------- */
+.work-head{display:flex;flex-direction:column;gap:14px;margin-bottom:34px}
+.gal{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:10px;grid-auto-flow:dense}
+.gal button{border:0;padding:0;cursor:zoom-in;border-radius:10px;overflow:hidden;background:#ddd;position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.gal button:hover img{transform:scale(1.05)}
+.gal .tall{grid-row:span 2}
+.gal .wide{grid-column:span 2}
+.gal .fx{opacity:0;transform:translateY(30px) scale(.97);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
+.gal .fx.in{opacity:1;transform:none}
+@media (min-width:768px){.gal{grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px}}
+.lb{position:fixed;inset:0;z-index:80;background:rgba(5,10,20,.94);display:none;align-items:center;justify-content:center;padding:20px}
+.lb.open{display:flex}
+.lb img{max-height:86vh;max-width:100%;border-radius:8px}
+.lb button{position:absolute;background:rgba(255,255,255,.12);border:0;color:#fff;width:48px;height:48px;border-radius:50%;font-size:26px;cursor:pointer}
+.lb .x{top:calc(14px + env(safe-area-inset-top));right:14px}
+.lb .prev{left:10px;top:50%;transform:translateY(-50%)}
+.lb .next{right:10px;top:50%;transform:translateY(-50%)}
+
+/* ---------- REVIEWS ---------- */
+.reviews{background:var(--paper)}
+.rv-top{display:flex;flex-direction:column;gap:18px;margin-bottom:38px}
+.g-badge{display:inline-flex;align-items:center;gap:14px;background:var(--cream);border:1px solid var(--line);padding:14px 20px;border-radius:14px;text-decoration:none;align-self:flex-start}
+.g-badge b{font-family:var(--display);font-size:44px;line-height:1;font-weight:900}
+.stars{color:var(--gold);letter-spacing:2px;font-size:20px}
+.g-badge small{display:block;color:var(--muted);font-weight:600;font-size:14px}
+.rv-grid{display:grid;gap:18px}
+.rv{background:var(--cream);border-radius:var(--radius);padding:26px;border:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.rv q{font-size:17px;quotes:none;color:#2a3342}
+.rv footer{margin-top:auto;font-weight:700;display:flex;justify-content:space-between;align-items:center;font-size:15px}
+.rv footer span{color:var(--muted);font-weight:600;font-size:13px}
+@media (min-width:768px){.rv-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){.rv-grid{grid-template-columns:repeat(3,1fr)}.rv:first-child{grid-column:span 2}}
+
+/* ---------- BRANDS + WARRANTY ---------- */
+.trust{background:var(--cream);padding:70px 0}
+.trust-grid{display:grid;gap:36px;align-items:center}
+.warranty{display:flex;gap:20px;align-items:center}
+.warranty img{width:110px;height:110px;flex:none}
+.warranty h3{font-family:var(--display);font-weight:900;font-size:34px;text-transform:uppercase;line-height:1}
+.warranty p{color:var(--muted);margin-top:6px}
+.brands{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.brands div{background:#fff;border:1px solid var(--line);border-radius:12px;height:84px;display:grid;place-items:center;padding:12px}
+.brands img{max-height:56px;width:auto;object-fit:contain}
+@media (max-width:420px){.brands{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:900px){.trust-grid{grid-template-columns:1fr 1.1fr}}
+
+/* ---------- AREAS ---------- */
+.areas{background:var(--navy-2);color:#fff}
+.areas h2{color:#fff}
+.areas .lead{color:rgba(255,255,255,.72)}
+.area-grid{display:grid;gap:34px;margin-top:36px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start}
+.chips span{border:1px solid rgba(255,255,255,.22);padding:9px 15px;border-radius:999px;font-weight:600;font-size:15px}
+.chips span.home{background:var(--red);border-color:var(--red)}
+.map{border-radius:var(--radius);overflow:hidden;min-height:320px;background:#1b2b47}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block;filter:saturate(.85)}
+@media (min-width:900px){.area-grid{grid-template-columns:1fr 1fr}.map,.map iframe{min-height:400px}}
+
+/* ---------- QUOTE ---------- */
+.quote{position:relative;color:#fff;overflow:hidden;isolation:isolate}
+.quote-bg{position:absolute;inset:0;z-index:-2}
+.quote-bg img{width:100%;height:100%;object-fit:cover}
+.quote::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(160deg,rgba(10,22,40,.96) 30%,rgba(168,22,35,.88) 100%)}
+.quote h2{color:#fff}
+.q-grid{display:grid;gap:40px}
+.q-side p{color:rgba(255,255,255,.82);margin-top:16px;max-width:46ch}
+.big-call{display:inline-flex;margin-top:26px;align-items:center;gap:12px;font-family:var(--display);font-weight:900;font-size:clamp(38px,10vw,56px);color:#fff;text-decoration:none;line-height:1}
+.big-call svg{width:36px;height:36px;fill:var(--gold)}
+.form{background:#fff;color:var(--ink);border-radius:18px;padding:24px;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.form h3{font-family:var(--display);font-weight:900;font-size:32px;text-transform:uppercase;line-height:1}
+.form .sub{color:var(--muted);font-size:15px;margin-top:6px}
+.fields{display:grid;gap:14px;margin-top:20px}
+.form label{display:block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#46505f;margin-bottom:6px}
+.form input,.form select,.form textarea{width:100%;font:inherit;font-size:16px;padding:14px;border:1.5px solid #d6d0c4;border-radius:10px;background:#fbfaf7;color:var(--ink)}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--red);background:#fff}
+.form textarea{min-height:96px;resize:vertical}
+.form .btn-red{width:100%;margin-top:18px}
+.form .fine{font-size:13px;color:var(--muted);margin-top:12px;text-align:center}
+.form .done{display:none;margin-top:14px;padding:14px;border-radius:10px;background:#eef7ee;color:#1f5f2a;font-weight:600;font-size:15px}
+@media (min-width:600px){.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}}
+@media (min-width:960px){.q-grid{grid-template-columns:1fr 1fr;align-items:center;gap:70px}.form{padding:34px}}
+
+/* ---------- FOOTER ---------- */
+footer.site{background:#060d18;color:rgba(255,255,255,.7);padding:46px 0 120px;font-size:15px}
+.f-in{display:flex;flex-direction:column;gap:22px}
+.f-in a{color:#fff;text-decoration:none;font-weight:600}
+.f-row{display:flex;flex-wrap:wrap;gap:12px 24px}
+@media (min-width:960px){footer.site{padding-bottom:46px}.f-in{flex-direction:row;justify-content:space-between;align-items:center}}
+
+/* ---------- MOBILE STICKY BAR ---------- */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:45;display:grid;grid-template-columns:1fr 1.3fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(10,22,40,.97);box-shadow:0 -8px 24px rgba(0,0,0,.25);transform:translateY(110%);transition:transform .35s ease}
+.bar.show{transform:none}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:12px;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:15px}
+.bar .b-call{background:#fff;color:var(--navy)}
+.bar .b-quote{background:var(--red);color:#fff}
+.bar svg{width:18px;height:18px;fill:currentColor}
+@media (min-width:960px){.bar{display:none}}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .reveal-1,.reveal-2,.reveal-3,.reveal-4{opacity:1;transform:none}
+  .gal .fx{opacity:1;transform:none}
+  .track i{transform:scaleY(1)}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ph" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="SOS Roofing home">
+      <img src="img/eagle.png" alt="">
+      <span>SOS Roofing</span>
+    </a>
+    <ul class="links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#areas">Areas</a></li>
+      <li><a class="cta" href="#quote">Free Quote</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i></button>
+  </div>
+</header>
+
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#process">Process</a>
+  <a href="#work">Our Work</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#areas">Service Area</a>
+  <a href="#quote">Free Quote</a>
+  <a class="d-call" href="tel:+18015642068">Call (801) 564-2068</a>
+</nav>
+
+<main id="top">
+
+<!-- HERO: name, quote button, phone. Nothing else. -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg"><img src="img/hero.jpg" alt="A finished home roof at dusk" fetchpriority="high"></div>
+  <div class="hero-in" id="heroIn">
+    <h1 class="h-name">
+      <span class="h-sos reveal-1">SOS</span>
+      <span class="h-roof reveal-2"><span>Roofing</span></span>
+      <span class="h-utah reveal-2">Utah</span>
+    </h1>
+    <div class="hero-actions">
+      <a class="btn btn-red reveal-3" href="#quote">Get a Free Quote</a>
+      <a class="h-phone reveal-4" href="tel:+18015642068"><svg><use href="#ph"/></svg>(801) 564-2068</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><b data-count="1991">1991</b><span>Roofing since</span></div>
+    <div class="stat"><b>5.0<em>&#9733;</em></b><span>34 Google reviews</span></div>
+    <div class="stat"><b>Lifetime</b><span>Warranty on every roof</span></div>
+    <div class="stat"><b>~2 Days</b><span>Typical replacement</span></div>
+  </div>
+</div>
+
+<section class="pad" id="about">
+  <div class="wrap about-grid">
+    <div class="about-img">
+      <img src="img/crew.jpg" alt="SOS Roofing crew tearing off an old roof in Northern Utah" loading="lazy">
+      <div class="tag">Family owned in Roy</div>
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">Who we are</span>
+      <h2>A roofer you won't have to chase down</h2>
+      <p>Everybody has heard a roofer horror story. Cheap materials, corners cut, a deposit taken and then nobody answers the phone. We've spent more than 30 years being the opposite of that.</p>
+      <p>SOS Roofing isn't an out-of-state outfit following hailstorms around. We live and work in Roy, and we roof homes from North Salt Lake up to Brigham City. Steve and the crew show up when they say they will, protect your yard, and clean up so well you'd hardly know they were there.</p>
+      <ul class="checks">
+        <li>Licensed, insured and manufacturer certified</li>
+        <li>One team oversees your whole project</li>
+        <li>Help with insurance claims from start to finish</li>
+        <li>Military discounts</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="services pad" id="services">
+  <div class="wrap">
+    <div class="svc-head">
+      <span class="eyebrow">What we do</span>
+      <h2>Roofing services</h2>
+      <p class="lead">Residential roofing done right the first time, from a single leak to a full tear-off.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc"><img src="img/home1.jpg" alt="" loading="lazy"><div><h3>Roof Replacement</h3><p>Full tear-off and new roof, usually finished in about two days.</p></div></article>
+      <article class="svc"><img src="img/ridge.jpg" alt="" loading="lazy"><div><h3>Roof Repair</h3><p>Leaks, missing shingles, flashing and vents fixed before they turn into water damage.</p></div></article>
+      <article class="svc"><img src="img/tearoff.jpg" alt="" loading="lazy"><div><h3>Insurance Claims</h3><p>We document the damage and work with your adjuster so you aren't stuck sorting it out alone.</p></div></article>
+      <article class="svc"><img src="img/crew2.jpg" alt="" loading="lazy"><div><h3>Storm Damage</h3><p>Wind and hail damage patched fast, then repaired properly.</p></div></article>
+      <article class="svc"><img src="img/dark.jpg" alt="" loading="lazy"><div><h3>Roof Inspections</h3><p>An honest look at what your roof needs, and what it doesn't.</p></div></article>
+      <article class="svc"><img src="img/flat2.jpg" alt="" loading="lazy"><div><h3>Flat &amp; Low-Slope</h3><p>Clean, sealed membrane roofs for porches, additions and low-pitch homes.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="process pad" id="process">
+  <div class="wrap proc-grid">
+    <div>
+      <span class="eyebrow">How it works</span>
+      <h2>Four steps.<br>Zero stress.</h2>
+      <p class="lead" style="margin-top:14px">No pushy sales visit. Here's exactly what happens after you reach out.</p>
+      <div class="steps" id="steps">
+        <div class="track"><i id="trackFill"></i></div>
+        <div class="step"><span class="dot">1</span><h3>Request an estimate</h3><p>One of our roofers comes out, measures your roof and looks it over. You don't even need to be home.</p></div>
+        <div class="step"><span class="dot">2</span><h3>Get it by email</h3><p>You get a detailed written estimate in your inbox. Sign it digitally, send it back, and we'll call to set a date.</p></div>
+        <div class="step"><span class="dot">3</span><h3>We do the work</h3><p>Most replacements take about two days:</p><ul><li>Old shingles come off</li><li>Plants, shrubs and decks get covered</li><li>New roof goes on, then a full cleanup</li></ul></div>
+        <div class="step"><span class="dot">4</span><h3>Walkthrough &amp; warranty</h3><p>You get a signed lifetime warranty from us and from the manufacturer. If you loved how it went, we'd be grateful for a review.</p></div>
+      </div>
+    </div>
+    <div class="proc-photos">
+      <img src="img/underlay.jpg" alt="New underlayment going down on a roof" loading="lazy">
+      <img src="img/skylight.jpg" alt="Finished roof with a new skylight" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="work">
+  <div class="wrap">
+    <div class="work-head">
+      <span class="eyebrow">Recent jobs</span>
+      <h2>Our work</h2>
+      <p class="lead">Real roofs from around Northern Utah. Tap any photo to see it bigger.</p>
+    </div>
+    <div class="gal" id="gal">
+      <button class="fx wide tall"><img src="img/home2.jpg" alt="Finished roof on a ranch home" loading="lazy"></button>
+      <button class="fx tall"><img src="img/home5.jpg" alt="Two-story home with a new roof" loading="lazy"></button>
+      <button class="fx"><img src="img/home1.jpg" alt="Cape-style home with a new roof" loading="lazy"></button>
+      <button class="fx"><img src="img/skylight.jpg" alt="New shingles around a skylight" loading="lazy"></button>
+      <button class="fx tall"><img src="img/mtn.jpg" alt="Roof job with mountain views" loading="lazy"></button>
+      <button class="fx wide"><img src="img/home3.jpg" alt="Two-story home after roof replacement" loading="lazy"></button>
+      <button class="fx"><img src="img/shingle.jpg" alt="Close-up of new architectural shingles" loading="lazy"></button>
+      <button class="fx tall"><img src="img/brown.jpg" alt="New brown shingle roof" loading="lazy"></button>
+      <button class="fx"><img src="img/home6.jpg" alt="Finished roof on a rambler" loading="lazy"></button>
+      <button class="fx"><img src="img/flat.jpg" alt="White flat roof membrane" loading="lazy"></button>
+      <button class="fx wide"><img src="img/home4.jpg" alt="Large two-story home with three-car garage" loading="lazy"></button>
+      <button class="fx"><img src="img/home7.jpg" alt="Single-story home after new roof" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="x" aria-label="Close">&times;</button>
+  <button class="prev" aria-label="Previous">&#8249;</button>
+  <img alt="">
+  <button class="next" aria-label="Next">&#8250;</button>
+</div>
+
+<section class="reviews pad" id="reviews">
+  <div class="wrap">
+    <div class="rv-top">
+      <span class="eyebrow">Reviews</span>
+      <h2>What homeowners say</h2>
+      <a class="g-badge" href="https://www.google.com/maps/search/?api=1&query=SOS+Roofing+Roy+UT" target="_blank" rel="noopener">
+        <b>5.0</b>
+        <div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><small>34 reviews on Google</small></div>
+      </a>
+    </div>
+    <div class="rv-grid">
+      <blockquote class="rv">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <q>SOS roofing is top notch and we highly recommend! We recently got our roof completely done by Steve and his guys. Steve was prompt, efficient, and provided exceptional customer service. He went above and beyond to accommodate my request for a skylight in replace of our swamp cooler. His guys did a quality job on the roof and it looks amazing!!</q>
+        <footer>Camille S. <span>Google</span></footer>
+      </blockquote>
+      <blockquote class="rv">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <q>Steve is a man of his word and backs it up with an awesome hard working crew. I had a deadline with my insurance company to fully replace my roof and this fine company went above and beyond my expectations and saved us!</q>
+        <footer>Chad J. <span>Google</span></footer>
+      </blockquote>
+      <blockquote class="rv">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <q>Steve was amazing to work with and did a fabulous job!! He's my roofer from here on out since I'm in real estate and am always needing a great roofer that does what he says and at a great price.</q>
+        <footer>Brandi S. <span>Google</span></footer>
+      </blockquote>
+      <blockquote class="rv">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <q>From the beginning to the fast end of my roof being replaced was great. They were fast, clean and went above and beyond what they had to do. It is hard to find service like this now days.</q>
+        <footer>Jeremy P. <span>Google</span></footer>
+      </blockquote>
+      <blockquote class="rv">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <q>Highly recommend! These guys are amazing and very professional.</q>
+        <footer>Nick P. <span>Google</span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap trust-grid">
+    <div class="warranty">
+      <img src="img/warranty.png" alt="Lifetime warranty seal">
+      <div>
+        <h3>Lifetime warranty, in writing</h3>
+        <p>Every roof we install is backed by us and by the manufacturer. Our work is 100% guaranteed.</p>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">Materials we install</span>
+      <div class="brands">
+        <div><img src="img/gaf.png" alt="GAF"></div>
+        <div><img src="img/oc.png" alt="Owens Corning"></div>
+        <div><img src="img/ct.jpg" alt="CertainTeed"></div>
+        <div><img src="img/tamko.jpg" alt="TAMKO"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas pad" id="areas">
+  <div class="wrap">
+    <span class="eyebrow">Service area</span>
+    <h2>The Northern Wasatch Front</h2>
+    <p class="lead" style="margin-top:14px">Based in Roy. If you're between North Salt Lake and Brigham City, we'll come to you.</p>
+    <div class="area-grid">
+      <div class="chips">
+        <span class="home">Roy</span><span>Ogden</span><span>North Ogden</span><span>South Ogden</span><span>Layton</span><span>Kaysville</span><span>Syracuse</span><span>Clearfield</span><span>Clinton</span><span>West Haven</span><span>Harrisville</span><span>Plain City</span><span>Pleasant View</span><span>Willard</span><span>Perry</span><span>Brigham City</span><span>Centerville</span><span>Bountiful</span><span>North Salt Lake</span>
+      </div>
+      <div class="map">
+        <iframe title="Map of SOS Roofing in Roy, Utah" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=SOS%20Roofing%2C%20Roy%2C%20UT%2084067&z=10&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote pad" id="quote">
+  <div class="quote-bg"><img src="img/home4.jpg" alt="" loading="lazy"></div>
+  <div class="wrap q-grid">
+    <div class="q-side">
+      <span class="eyebrow" style="color:var(--gold)">Free quote</span>
+      <h2>Let's take a look at your roof</h2>
+      <p>Estimates are free and there's no pressure. Call or text us directly, or send your info here and we'll get back to you.</p>
+      <a class="big-call" href="tel:+18015642068"><svg><use href="#ph"/></svg>(801) 564-2068</a>
+    </div>
+    <form class="form" id="qform" novalidate>
+      <h3>Request a free quote</h3>
+      <p class="sub">Takes about 30 seconds.</p>
+      <div class="fields">
+        <div class="two">
+          <div><label for="fn">Name</label><input id="fn" name="name" autocomplete="name" required></div>
+          <div><label for="fp">Phone</label><input id="fp" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        </div>
+        <div><label for="fa">Address or city</label><input id="fa" name="address" autocomplete="street-address"></div>
+        <div><label for="fs">What do you need?</label>
+          <select id="fs" name="service">
+            <option>Roof replacement</option>
+            <option>Roof repair / leak</option>
+            <option>Insurance claim / storm damage</option>
+            <option>Roof inspection</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div><label for="fm">Anything we should know?</label><textarea id="fm" name="msg" placeholder="Optional"></textarea></div>
+      </div>
+      <button class="btn btn-red" type="submit">Send my request</button>
+      <p class="fine">Sends as a text message to SOS Roofing from your phone.</p>
+      <div class="done" id="qdone"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap f-in">
+    <a class="brand" href="#top"><img src="img/eagle.png" alt=""><span>SOS Roofing Utah</span></a>
+    <div class="f-row">
+      <a href="tel:+18015642068">(801) 564-2068</a>
+      <a href="https://www.facebook.com/sosroofingutah" target="_blank" rel="noopener">Facebook</a>
+      <span>Roy, Utah</span>
+    </div>
+    <div>&copy; 2026 SOS Roofing Utah. Roofing Northern Utah since 1991.</div>
+  </div>
+</footer>
+
+<div class="bar" id="bar">
+  <a class="b-call" href="tel:+18015642068"><svg><use href="#ph"/></svg>Call</a>
+  <a class="b-quote" href="#quote">Free Quote</a>
+</div>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const nav = document.getElementById('nav');
+  const bar = document.getElementById('bar');
+  const hero = document.getElementById('hero');
+  const heroBg = document.getElementById('heroBg');
+  const heroIn = document.getElementById('heroIn');
+  const steps = document.getElementById('steps');
+  const fill = document.getElementById('trackFill');
+  const stepEls = [...document.querySelectorAll('.step')];
+  const quote = document.getElementById('quote');
+
+  // Menu
+  const burger = document.getElementById('burger');
+  const toggle = (open) => {
+    document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+    if (open) nav.classList.add('solid'); else onScroll();
+  };
+  burger.addEventListener('click', () => toggle(!document.body.classList.contains('menu-open')));
+  document.querySelectorAll('#drawer a').forEach(a => a.addEventListener('click', () => toggle(false)));
+
+  // Scroll-linked effects (all reversible)
+  let ticking = false;
+  function onScroll(){
+    const y = scrollY, vh = innerHeight;
+    if (!document.body.classList.contains('menu-open')) nav.classList.toggle('solid', y > vh * 0.12);
+    const q = quote.getBoundingClientRect();
+    bar.classList.toggle('show', y > hero.offsetHeight * 0.75 && q.top > vh * 0.6);
+
+    if (!reduce && y < vh * 1.2) {
+      const p = Math.min(y / vh, 1);
+      heroBg.style.transform = `translate3d(0, ${y * 0.35}px, 0) scale(${1 + p * 0.08})`;
+      heroIn.style.transform = `translate3d(0, ${y * -0.18}px, 0)`;
+      heroIn.style.opacity = String(1 - p * 1.3);
+    }
+
+    const r = steps.getBoundingClientRect();
+    const prog = Math.max(0, Math.min(1, (vh * 0.62 - r.top) / r.height));
+    if (!reduce) fill.style.setProperty('--p', prog);
+    stepEls.forEach(s => {
+      const sr = s.getBoundingClientRect();
+      s.classList.toggle('on', reduce || sr.top < vh * 0.62);
+    });
+    ticking = false;
+  }
+  addEventListener('scroll', () => { if (!ticking){ ticking = true; requestAnimationFrame(onScroll); } }, {passive:true});
+  addEventListener('resize', onScroll);
+  onScroll();
+
+  // Gallery reveal (reverses when scrolled back out)
+  const tiles = document.querySelectorAll('.gal .fx');
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('in', e.isIntersecting)), {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+    tiles.forEach((t,i) => { t.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(t); });
+  } else tiles.forEach(t => t.classList.add('in'));
+
+  // Lightbox
+  const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
+  const imgs = [...document.querySelectorAll('#gal img')];
+  let idx = 0;
+  const show = i => { idx = (i + imgs.length) % imgs.length; lbImg.src = imgs[idx].src; lbImg.alt = imgs[idx].alt; };
+  document.querySelectorAll('#gal button').forEach((b,i) => b.addEventListener('click', () => { show(i); lb.classList.add('open'); document.body.style.overflow='hidden'; }));
+  const close = () => { lb.classList.remove('open'); document.body.style.overflow=''; };
+  lb.querySelector('.x').onclick = close;
+  lb.querySelector('.prev').onclick = e => { e.stopPropagation(); show(idx-1); };
+  lb.querySelector('.next').onclick = e => { e.stopPropagation(); show(idx+1); };
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  addEventListener('keydown', e => { if (!lb.classList.contains('open')) return; if (e.key==='Escape') close(); if (e.key==='ArrowLeft') show(idx-1); if (e.key==='ArrowRight') show(idx+1); });
+  let sx = null;
+  lb.addEventListener('touchstart', e => sx = e.touches[0].clientX, {passive:true});
+  lb.addEventListener('touchend', e => { if (sx===null) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1)); sx = null; });
+
+  // Quote form -> text message to the business
+  const form = document.getElementById('qform'), done = document.getElementById('qdone');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(form));
+    if (!d.name.trim() || !d.phone.trim()) { done.style.display='block'; done.style.background='#fdecec'; done.style.color='#8a1b22'; done.textContent='Please add your name and phone number.'; return; }
+    const body = `Hi SOS Roofing, I'd like a free quote.\nName: ${d.name}\nPhone: ${d.phone}` + (d.address ? `\nAddress: ${d.address}` : '') + `\nNeed: ${d.service}` + (d.msg ? `\nNotes: ${d.msg}` : '');
+    const mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    done.style.display='block'; done.style.background=''; done.style.color='';
+    if (mobile) {
+      location.href = 'sms:+18015642068?&body=' + encodeURIComponent(body);
+      done.textContent = 'Your text app should open with everything filled in. Just hit send.';
+    } else {
+      done.innerHTML = 'Thanks! The fastest way to reach us from a computer is a quick call: <a href="tel:+18015642068" style="color:inherit">(801) 564-2068</a>.';
+    }
+  });
+})();
+</script>
+</body>
+</html>
