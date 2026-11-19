@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SOS Roofing Utah | Roy &amp; Northern Wasatch Front Roofers</title>
 <meta name="description" content="Family-owned roofers in Roy, Utah since 1991. Roof replacement, repair, insurance claims and storm damage from North Salt Lake to Brigham City. Free quotes: (801) 564-2068.">
-<meta name="theme-color" content="#0a1628">
+<meta name="theme-color" content="#0a3161">
 <meta property="og:title" content="SOS Roofing Utah">
 <meta property="og:description" content="Family-owned roofers in Roy, Utah since 1991. Free quotes: (801) 564-2068.">
 <meta property="og:image" content="img/hero.jpg">
@@ -33,15 +33,15 @@
 </script>
 <style>
 :root{
-  --navy:#0a1628;
-  --navy-2:#11223d;
-  --ink:#0d1726;
-  --red:#d0202e;
-  --red-dark:#a81623;
-  --cream:#f6f2eb;
+  --navy:#0a3161;
+  --navy-2:#0e3d7a;
+  --ink:#0c1f3d;
+  --red:#c8102e;
+  --red-dark:#9e0c24;
+  --cream:#f3f6fb;
   --paper:#ffffff;
-  --muted:#5b6575;
-  --line:#e4ded3;
+  --muted:#55627a;
+  --line:#d9e1ee;
   --gold:#f2b632;
   --radius:14px;
   --gutter:16px;
@@ -59,10 +59,10 @@ section{scroll-margin-top:64px}
 
 /* ---------- NAV ---------- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .35s ease, box-shadow .35s ease;padding-top:env(safe-area-inset-top)}
-.nav.solid{background:rgba(10,22,40,.96);box-shadow:0 6px 24px rgba(0,0,0,.25);backdrop-filter:blur(8px)}
+.nav.solid{background:rgba(6,34,74,.96);box-shadow:0 6px 24px rgba(0,0,0,.25);backdrop-filter:blur(8px)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
-.brand img{width:40px;height:40px;object-fit:contain}
+.brand img{width:32px;height:32px;object-fit:contain}
 .brand span{font-family:var(--display);font-weight:900;font-size:22px;letter-spacing:.04em;text-transform:uppercase}
 .links{display:none;list-style:none;gap:26px;align-items:center}
 .links a{color:#fff;text-decoration:none;font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;opacity:.9}
@@ -89,18 +89,18 @@ section{scroll-margin-top:64px}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;animation:heroZoom 9s cubic-bezier(.2,.6,.2,1) both}
 @keyframes heroZoom{from{transform:scale(1.22)}to{transform:scale(1.04)}}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:
-  radial-gradient(ellipse 75% 50% at 50% 48%, rgba(10,22,40,.55), rgba(10,22,40,.0) 75%),
-  linear-gradient(180deg, rgba(10,22,40,.75) 0%, rgba(10,22,40,.25) 35%, rgba(10,22,40,.45) 70%, rgba(10,22,40,.95) 100%)}
+  radial-gradient(ellipse 75% 50% at 50% 48%, rgba(6,34,74,.55), rgba(6,34,74,.0) 75%),
+  linear-gradient(180deg, rgba(6,34,74,.75) 0%, rgba(6,34,74,.25) 35%, rgba(6,34,74,.45) 70%, rgba(6,34,74,.95) 100%)}
 .hero-in{position:relative;z-index:2;padding:0 var(--gutter);will-change:transform,opacity}
 .h-name{font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.82;letter-spacing:.01em;text-shadow:0 8px 40px rgba(0,0,0,.55)}
-.h-sos{display:block;font-size:clamp(132px,42vw,320px);color:#fff;letter-spacing:.02em;text-shadow:.035em .035em 0 var(--red),.07em .07em 0 rgba(10,22,40,.55),0 .12em .35em rgba(0,0,0,.55)}
-.h-roof{display:inline-block;font-size:clamp(44px,13vw,108px);letter-spacing:.08em;margin-top:.12em;padding:.06em .32em .02em .4em;background:var(--red);color:#fff;text-shadow:none;box-shadow:0 14px 34px rgba(208,32,46,.45);transform:skewX(-6deg)}
+.h-sos{display:block;font-size:clamp(100px,30vw,230px);color:#fff;letter-spacing:.02em;text-shadow:.03em .03em 0 var(--red),0 .1em .3em rgba(0,0,0,.45)}
+.h-roof{display:inline-block;font-size:clamp(34px,9.6vw,80px);letter-spacing:.08em;margin-top:.14em;padding:.06em .32em .02em .4em;background:var(--red);color:#fff;text-shadow:none;box-shadow:0 10px 24px rgba(200,16,46,.35);transform:skewX(-6deg)}
 .h-roof > span{display:inline-block;transform:skewX(6deg)}
 .h-utah{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:16px;font-family:var(--body);font-weight:700;font-size:clamp(14px,3.6vw,18px);letter-spacing:.5em;text-transform:uppercase;color:#fff;padding-left:.5em}
 .h-utah::before,.h-utah::after{content:"";width:clamp(28px,10vw,70px);height:2px;background:var(--red)}
 .hero-actions{margin-top:clamp(28px,6vh,44px);display:flex;flex-direction:column;align-items:center;gap:16px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;border:0;cursor:pointer;border-radius:999px;transition:transform .2s, background .2s, box-shadow .2s}
-.btn-red{background:var(--red);color:#fff;padding:18px 34px;font-size:17px;box-shadow:0 12px 30px rgba(208,32,46,.45)}
+.btn-red{background:var(--red);color:#fff;padding:18px 34px;font-size:17px;box-shadow:0 12px 30px rgba(200,16,46,.45)}
 .btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
 .h-phone{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:700;font-size:clamp(22px,6vw,28px);letter-spacing:.03em;text-shadow:0 2px 12px rgba(0,0,0,.6)}
 .h-phone svg{width:24px;height:24px;fill:var(--gold)}
@@ -125,7 +125,7 @@ h2{font-family:var(--display);font-weight:900;text-transform:uppercase;line-heig
 /* ---------- ABOUT ---------- */
 .about-grid{display:grid;gap:40px;align-items:center}
 .about-img{position:relative}
-.about-img img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);box-shadow:0 30px 60px -20px rgba(10,22,40,.45)}
+.about-img img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);box-shadow:0 30px 60px -20px rgba(6,34,74,.45)}
 .about-img .tag{position:absolute;left:-6px;bottom:-18px;background:var(--red);color:#fff;font-family:var(--display);font-weight:800;font-size:22px;text-transform:uppercase;padding:12px 18px;border-radius:10px;letter-spacing:.04em;box-shadow:0 12px 24px rgba(0,0,0,.2)}
 .about-copy p{margin-top:18px;color:#36404f}
 .checks{list-style:none;margin-top:24px;display:grid;gap:12px}
@@ -139,7 +139,7 @@ h2{font-family:var(--display);font-weight:900;text-transform:uppercase;line-heig
 .svc-grid{display:grid;gap:18px}
 .svc{position:relative;border-radius:var(--radius);overflow:hidden;min-height:260px;color:#fff;display:flex;align-items:flex-end;isolation:isolate}
 .svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s ease}
-.svc::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,22,40,0) 25%,rgba(10,22,40,.92) 100%)}
+.svc::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,34,74,0) 25%,rgba(6,34,74,.92) 100%)}
 .svc:hover img{transform:scale(1.06)}
 .svc div{padding:22px}
 .svc h3{font-family:var(--display);font-weight:800;font-size:30px;text-transform:uppercase;line-height:1;letter-spacing:.02em}
@@ -231,7 +231,7 @@ h2{font-family:var(--display);font-weight:900;text-transform:uppercase;line-heig
 .quote{position:relative;color:#fff;overflow:hidden;isolation:isolate}
 .quote-bg{position:absolute;inset:0;z-index:-2}
 .quote-bg img{width:100%;height:100%;object-fit:cover}
-.quote::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(160deg,rgba(10,22,40,.96) 30%,rgba(168,22,35,.88) 100%)}
+.quote::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(160deg,rgba(6,34,74,.96) 30%,rgba(158,12,36,.88) 100%)}
 .quote h2{color:#fff}
 .q-grid{display:grid;gap:40px}
 .q-side p{color:rgba(255,255,255,.82);margin-top:16px;max-width:46ch}
@@ -242,7 +242,7 @@ h2{font-family:var(--display);font-weight:900;text-transform:uppercase;line-heig
 .form .sub{color:var(--muted);font-size:15px;margin-top:6px}
 .fields{display:grid;gap:14px;margin-top:20px}
 .form label{display:block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#46505f;margin-bottom:6px}
-.form input,.form select,.form textarea{width:100%;font:inherit;font-size:16px;padding:14px;border:1.5px solid #d6d0c4;border-radius:10px;background:#fbfaf7;color:var(--ink)}
+.form input,.form select,.form textarea{width:100%;font:inherit;font-size:16px;padding:14px;border:1.5px solid #cfd8e6;border-radius:10px;background:#f7f9fd;color:var(--ink)}
 .form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--red);background:#fff}
 .form textarea{min-height:96px;resize:vertical}
 .form .btn-red{width:100%;margin-top:18px}
@@ -252,20 +252,38 @@ h2{font-family:var(--display);font-weight:900;text-transform:uppercase;line-heig
 @media (min-width:960px){.q-grid{grid-template-columns:1fr 1fr;align-items:center;gap:70px}.form{padding:34px}}
 
 /* ---------- FOOTER ---------- */
-footer.site{background:#060d18;color:rgba(255,255,255,.7);padding:46px 0 120px;font-size:15px}
+footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 120px;font-size:15px}
 .f-in{display:flex;flex-direction:column;gap:22px}
 .f-in a{color:#fff;text-decoration:none;font-weight:600}
 .f-row{display:flex;flex-wrap:wrap;gap:12px 24px}
 @media (min-width:960px){footer.site{padding-bottom:46px}.f-in{flex-direction:row;justify-content:space-between;align-items:center}}
 
 /* ---------- MOBILE STICKY BAR ---------- */
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:45;display:grid;grid-template-columns:1fr 1.3fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(10,22,40,.97);box-shadow:0 -8px 24px rgba(0,0,0,.25);transform:translateY(110%);transition:transform .35s ease}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:45;display:grid;grid-template-columns:1fr 1.3fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(6,34,74,.97);box-shadow:0 -8px 24px rgba(0,0,0,.25);transform:translateY(110%);transition:transform .35s ease}
 .bar.show{transform:none}
 .bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:12px;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:15px}
 .bar .b-call{background:#fff;color:var(--navy)}
 .bar .b-quote{background:var(--red);color:#fff}
 .bar svg{width:18px;height:18px;fill:currentColor}
 @media (min-width:960px){.bar{display:none}}
+
+/* ---------- FLAGS ---------- */
+.flagband{position:relative;height:28px;background:repeating-linear-gradient(180deg,var(--red) 0 4px,#fff 4px 8px)}
+.flagband::before{content:"";position:absolute;left:0;top:0;bottom:0;width:min(30%,260px);background:var(--navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='14'%3E%3Cpolygon fill='white' points='11,2 12.3,5.6 16,5.6 13,7.8 14.1,11.4 11,9.2 7.9,11.4 9,7.8 6,5.6 9.7,5.6'/%3E%3C/svg%3E") 0 0/22px 14px repeat}
+.starry{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cpolygon fill='white' fill-opacity='.07' points='14,7 15.6,12 21,12 16.7,15.2 18.3,20.3 14,17.2 9.7,20.3 11.3,15.2 7,12 12.4,12'/%3E%3Cpolygon fill='white' fill-opacity='.07' points='42,35 43.6,40 49,40 44.7,43.2 46.3,48.3 42,45.2 37.7,48.3 39.3,43.2 35,40 40.4,40'/%3E%3C/svg%3E");background-size:56px 56px}
+.eyebrow::before{content:"";display:inline-block;width:25px;height:13px;margin-right:10px;vertical-align:-1px;background:url(img/flag.svg) center/cover;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.wave{position:absolute;aspect-ratio:1.9;background:url(img/flag.svg) center/cover;border-radius:3px;box-shadow:0 14px 30px rgba(6,34,74,.35);overflow:hidden;animation:flap 3.6s ease-in-out infinite alternate;transform-origin:left center}
+.wave::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,0,0,.2) 0%,rgba(255,255,255,.22) 17%,rgba(0,0,0,.16) 34%,rgba(255,255,255,.2) 51%,rgba(0,0,0,.16) 68%,rgba(255,255,255,.18) 85%,rgba(0,0,0,.2) 100%);background-size:200% 100%;animation:folds 4.5s linear infinite}
+@keyframes flap{from{transform:rotate(-4deg) skewY(-2deg)}to{transform:rotate(-1deg) skewY(2deg)}}
+@keyframes folds{to{background-position:-200% 0}}
+.about-img .wave{top:-30px;right:-8px;width:clamp(110px,28vw,170px)}
+.q-side{position:relative}
+.process .eyebrow,.areas .eyebrow{color:#fff}
+.q-flag{display:flex;align-items:center;gap:12px;margin-top:26px;color:rgba(255,255,255,.85);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:14px}
+.q-flag i{position:relative;display:block;width:64px;height:34px;flex:none}
+.q-flag i .wave{inset:0;width:auto}
+.f-flag{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13px}
+.f-flag img{width:38px;height:20px;border-radius:2px}
 
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
@@ -330,7 +348,8 @@ footer.site{background:#060d18;color:rgba(255,255,255,.7);padding:46px 0 120px;f
   </div>
 </section>
 
-<div class="stats">
+<div class="flagband" aria-hidden="true"></div>
+<div class="stats starry">
   <div class="wrap stats-grid">
     <div class="stat"><b data-count="1991">1991</b><span>Roofing since</span></div>
     <div class="stat"><b>5.0<em>&#9733;</em></b><span>34 Google reviews</span></div>
@@ -343,6 +362,7 @@ footer.site{background:#060d18;color:rgba(255,255,255,.7);padding:46px 0 120px;f
   <div class="wrap about-grid">
     <div class="about-img">
       <img src="img/crew.jpg" alt="SOS Roofing crew tearing off an old roof in Northern Utah" loading="lazy">
+      <div class="wave" aria-hidden="true"></div>
       <div class="tag">Family owned in Roy</div>
     </div>
     <div class="about-copy">
@@ -354,7 +374,7 @@ footer.site{background:#060d18;color:rgba(255,255,255,.7);padding:46px 0 120px;f
         <li>Licensed, insured and manufacturer certified</li>
         <li>One team oversees your whole project</li>
         <li>Help with insurance claims from start to finish</li>
-        <li>Military discounts</li>
+        <li>Military, veteran and first responder discounts</li>
       </ul>
     </div>
   </div>
@@ -378,7 +398,7 @@ footer.site{background:#060d18;color:rgba(255,255,255,.7);padding:46px 0 120px;f
   </div>
 </section>
 
-<section class="process pad" id="process">
+<section class="process pad starry" id="process">
   <div class="wrap proc-grid">
     <div>
       <span class="eyebrow">How it works</span>
@@ -491,7 +511,7 @@ footer.site{background:#060d18;color:rgba(255,255,255,.7);padding:46px 0 120px;f
   </div>
 </section>
 
-<section class="areas pad" id="areas">
+<section class="areas pad starry" id="areas">
   <div class="wrap">
     <span class="eyebrow">Service area</span>
     <h2>The Northern Wasatch Front</h2>
@@ -515,6 +535,7 @@ footer.site{background:#060d18;color:rgba(255,255,255,.7);padding:46px 0 120px;f
       <h2>Let's take a look at your roof</h2>
       <p>Estimates are free and there's no pressure. Call or text us directly, or send your info here and we'll get back to you.</p>
       <a class="big-call" href="tel:+18015642068"><svg><use href="#ph"/></svg>(801) 564-2068</a>
+      <div class="q-flag"><i><span class="wave"></span></i>Ask about a military, veteran or first responder discount</div>
     </div>
     <form class="form" id="qform" novalidate>
       <h3>Request a free quote</h3>
@@ -545,9 +566,11 @@ footer.site{background:#060d18;color:rgba(255,255,255,.7);padding:46px 0 120px;f
 
 </main>
 
-<footer class="site">
+<div class="flagband" aria-hidden="true"></div>
+<footer class="site starry">
   <div class="wrap f-in">
     <a class="brand" href="#top"><img src="img/eagle.png" alt=""><span>SOS Roofing Utah</span></a>
+    <div class="f-flag"><img src="img/flag.svg" alt="">Proudly American. Family owned in Roy.</div>
     <div class="f-row">
       <a href="tel:+18015642068">(801) 564-2068</a>
       <a href="https://www.facebook.com/sosroofingutah" target="_blank" rel="noopener">Facebook</a>
