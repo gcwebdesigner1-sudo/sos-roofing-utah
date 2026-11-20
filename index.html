@@ -6,12 +6,22 @@
 <title>SOS Roofing Utah | Roy &amp; Northern Wasatch Front Roofers</title>
 <meta name="description" content="Family-owned roofers in Roy, Utah since 1991. Roof replacement, repair, insurance claims and storm damage from North Salt Lake to Brigham City. Free quotes: (801) 564-2068.">
 <meta name="theme-color" content="#0a3161">
-<meta property="og:title" content="SOS Roofing Utah">
-<meta property="og:description" content="Family-owned roofers in Roy, Utah since 1991. Free quotes: (801) 564-2068.">
-<meta property="og:image" content="img/hero.jpg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SOS Roofing">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:site_name" content="SOS Roofing Utah">
+<meta property="og:title" content="SOS Roofing Utah | Free Roof Estimates">
+<meta property="og:description" content="Family-owned roofers in Roy, Utah since 1991. 5.0 stars on Google. Call (801) 564-2068.">
+<meta property="og:image" content="https://gcwebdesigner1-sudo.github.io/sos-roofing-utah/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://gcwebdesigner1-sudo.github.io/sos-roofing-utah/">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/eagle.png">
-<link rel="apple-touch-icon" href="img/eagle.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 <link rel="preload" as="image" href="img/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,10 +56,13 @@
   --radius:14px;
   --gutter:16px;
   --display:"Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
-  --body:"Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --body:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Barlow", system-ui, "Segoe UI", sans-serif;
+  --glass:rgba(10,49,97,.84);
+  --spring:cubic-bezier(.32,.72,0,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{-webkit-font-smoothing:antialiased}
 body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.55;font-size:17px;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
@@ -59,7 +72,7 @@ section{scroll-margin-top:64px}
 
 /* ---------- NAV ---------- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .35s ease, box-shadow .35s ease;padding-top:env(safe-area-inset-top)}
-.nav.solid{background:rgba(6,34,74,.96);box-shadow:0 6px 24px rgba(0,0,0,.25);backdrop-filter:blur(8px)}
+.nav.solid{background:var(--glass);box-shadow:0 1px 0 rgba(255,255,255,.08),0 8px 24px rgba(0,0,0,.18);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
 .brand img{width:32px;height:32px;object-fit:contain}
@@ -76,17 +89,28 @@ section{scroll-margin-top:64px}
 .menu-open .burger i{background:transparent}
 .menu-open .burger i::before{top:0;transform:rotate(45deg)}
 .menu-open .burger i::after{top:0;transform:rotate(-45deg)}
-.drawer{position:fixed;inset:0;background:var(--navy);z-index:40;display:flex;flex-direction:column;justify-content:center;padding:80px 28px 40px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.2,1)}
+/* iOS-style bottom sheet menu */
+.scrim{position:fixed;inset:0;z-index:58;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .35s ease}
+.menu-open .scrim{opacity:1;pointer-events:auto}
+.drawer{position:fixed;left:0;right:0;bottom:0;z-index:60;max-height:88vh;overflow:hidden auto;overscroll-behavior:contain;background:var(--navy);border-radius:26px 26px 0 0;box-shadow:0 -20px 50px rgba(0,0,0,.35);padding:0 20px calc(22px + env(safe-area-inset-bottom));transform:translateY(105%);transition:transform .5s var(--spring)}
 .menu-open .drawer{transform:none}
-.drawer a{color:#fff;text-decoration:none;font-family:var(--display);font-weight:800;font-size:40px;text-transform:uppercase;line-height:1.25;letter-spacing:.02em}
-.drawer a:active{color:var(--gold)}
-.drawer > a{padding:2px 0}
-.d-ctas{display:grid;gap:12px;margin-top:30px}
-.drawer .d-quote,.drawer .d-call{font-family:var(--body);font-size:17px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;height:56px;border-radius:14px}
+.drawer .d-flag{margin:0 -20px;height:22px}
+.grab{display:block;width:40px;height:5px;border-radius:3px;background:rgba(255,255,255,.35);margin:10px auto 6px}
+.d-head{display:flex;align-items:center;justify-content:space-between;padding:6px 2px 10px}
+.d-head b{font-family:var(--display);font-weight:900;font-size:26px;text-transform:uppercase;letter-spacing:.03em;color:#fff}
+.d-x{width:34px;height:34px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:20px;line-height:1;cursor:pointer}
+.d-list{list-style:none;background:rgba(255,255,255,.07);border-radius:16px;overflow:hidden}
+.d-list a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;color:#fff;text-decoration:none;font-size:17px;font-weight:600}
+.d-list li+li a{border-top:1px solid rgba(255,255,255,.1)}
+.d-list a::after{content:"";width:8px;height:8px;border-top:2px solid rgba(255,255,255,.45);border-right:2px solid rgba(255,255,255,.45);transform:rotate(45deg)}
+.d-list a:active{background:rgba(255,255,255,.1)}
+.d-list .ico{display:flex;align-items:center;gap:14px}
+.d-list .ico svg{width:22px;height:22px;fill:var(--gold)}
+.d-ctas{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.drawer .d-quote,.drawer .d-call{font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;height:54px;border-radius:14px;text-decoration:none}
 .drawer .d-quote{background:var(--red);color:#fff}
 .drawer .d-call{background:#fff;color:var(--navy)}
-.drawer .d-flag{position:absolute;left:0;right:0;bottom:0}
-@media (min-width:960px){.links{display:flex}.burger,.drawer{display:none}}
+@media (min-width:960px){.links{display:flex}.burger,.drawer,.scrim{display:none}}
 
 /* ---------- HERO ---------- */
 .hero{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;color:#fff;display:grid;place-items:center;text-align:center;background:var(--navy)}
@@ -257,20 +281,60 @@ h2{font-family:var(--display);font-weight:900;text-transform:uppercase;line-heig
 @media (min-width:960px){.q-grid{grid-template-columns:1fr 1fr;align-items:center;gap:70px}.form{padding:34px}}
 
 /* ---------- FOOTER ---------- */
-footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 120px;font-size:15px}
+footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 calc(120px + env(safe-area-inset-bottom));font-size:15px}
 .f-in{display:flex;flex-direction:column;gap:22px}
 .f-in a{color:#fff;text-decoration:none;font-weight:600}
 .f-row{display:flex;flex-wrap:wrap;gap:12px 24px}
 @media (min-width:960px){footer.site{padding-bottom:46px}.f-in{flex-direction:row;justify-content:space-between;align-items:center}}
 
 /* ---------- MOBILE STICKY BAR ---------- */
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:45;display:grid;grid-template-columns:1fr 1.3fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(6,34,74,.97);box-shadow:0 -8px 24px rgba(0,0,0,.25);transform:translateY(110%);transition:transform .35s ease}
+.bar{position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:45;display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:6px;padding:6px;border-radius:24px;background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(22px);backdrop-filter:saturate(180%) blur(22px);border:1px solid rgba(255,255,255,.16);box-shadow:0 12px 34px rgba(4,20,45,.35);transform:translateY(140%);transition:transform .5s var(--spring)}
 .bar.show{transform:none}
-.bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:12px;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:15px}
-.bar .b-call{background:#fff;color:var(--navy)}
-.bar .b-quote{background:var(--red);color:#fff}
-.bar svg{width:18px;height:18px;fill:currentColor}
+.bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;height:54px;border-radius:18px;text-decoration:none;font-weight:600;font-size:12.5px;letter-spacing:.01em;color:#fff;transition:transform .15s ease, background .15s}
+.bar a:active{transform:scale(.94);background:rgba(255,255,255,.12)}
+.bar .b-quote{background:var(--red);flex-direction:row;gap:8px;font-size:15px;font-weight:700}
+.bar .b-quote:active{background:var(--red-dark)}
+.bar svg{width:22px;height:22px;fill:currentColor}
+.bar .b-quote svg{width:18px;height:18px}
 @media (min-width:960px){.bar{display:none}}
+
+/* ---------- HONOR (discount banner) ---------- */
+.honor{background:#fff;padding:28px 0 34px;position:relative}
+.honor-card{position:relative;overflow:hidden;background-color:var(--navy);color:#fff;border-radius:24px;text-align:center;padding:26px 22px 52px;box-shadow:0 24px 50px -18px rgba(10,49,97,.55);max-width:760px;margin:0 auto}
+.honor-top{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:14px}
+.honor-top .hf{position:relative;display:block;width:68px;height:36px}
+.honor-top .wave{inset:0;width:auto}
+.honor-top .hf:last-child .wave{animation-delay:-1.8s}
+.honor-stars{color:var(--gold);font-size:20px;letter-spacing:6px}
+.honor-kicker{font-weight:700;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.honor-h{font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.95;font-size:clamp(34px,9.6vw,58px);margin-top:10px;letter-spacing:.01em}
+.honor-h span{display:inline-block;margin-top:8px;color:#fff;background:var(--red);padding:.06em .28em .02em;transform:skewX(-6deg);font-size:.72em}
+.honor-p{margin:16px auto 0;max-width:46ch;color:rgba(255,255,255,.86);font-size:16.5px;line-height:1.5}
+.honor-who{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:18px}
+.honor-who li{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:8px 13px;border-radius:999px;font-size:14px;font-weight:600}
+.honor-who svg{width:16px;height:16px;fill:var(--gold)}
+.honor-btn{margin-top:22px;width:100%;max-width:360px;padding:17px 22px;font-size:15.5px}
+.honor-btn svg{width:18px;height:18px;fill:#fff}
+.honor-card .honor-band{position:absolute;left:0;right:0;bottom:0;height:20px}
+.honor-card .honor-band::before{width:34%}
+@media (min-width:700px){.honor{padding:44px 0 52px}.honor-card{padding:34px 40px 60px}}
+
+/* ---------- iPHONE FEEL ---------- */
+.btn,.svc,.rv,.gal button,.g-badge,.chips span,.d-list a,.honor-who li{transition:transform .18s var(--spring), background .18s, box-shadow .18s}
+.btn:active,.g-badge:active,.big-call:active,.h-phone:active{transform:scale(.96)}
+.svc:active,.rv:active{transform:scale(.98)}
+.gal button:active{transform:scale(.97)}
+.form input,.form select,.form textarea{-webkit-appearance:none;appearance:none;border-radius:12px}
+.form select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2355627a' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+.form input:focus,.form select:focus,.form textarea:focus{box-shadow:0 0 0 4px rgba(200,16,46,.14)}
+@media (max-width:699px){
+  .form{border-radius:22px;padding:22px 18px}
+  .form input,.form select,.form textarea{background-color:#f1f4f9;border-color:transparent;padding:15px 14px}
+  .rv,.svc,.brands div,.map{border-radius:20px}
+  .about-img img{border-radius:20px}
+  .gal button{border-radius:14px}
+  .stats{padding:28px 0}
+}
 
 /* ---------- PHONE ---------- */
 .dots,.swipe-hint{display:none}
@@ -350,18 +414,23 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
   </div>
 </header>
 
-<nav class="drawer starry" id="drawer" aria-label="Mobile">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#process">Process</a>
-  <a href="#work">Our Work</a>
-  <a href="#reviews">Reviews</a>
-  <a href="#areas">Service Area</a>
-  <div class="d-ctas">
-    <a class="d-quote" href="#quote">Get a Free Quote</a>
-    <a class="d-call" href="tel:+18015642068">Call (801) 564-2068</a>
-  </div>
+<div class="scrim" id="scrim"></div>
+<nav class="drawer starry" id="drawer" aria-label="Menu">
   <div class="flagband d-flag" aria-hidden="true"></div>
+  <span class="grab" aria-hidden="true"></span>
+  <div class="d-head"><b>Menu</b><button class="d-x" id="dclose" aria-label="Close menu">&times;</button></div>
+  <ul class="d-list">
+    <li><a href="#about"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg>About us</span></a></li>
+    <li><a href="#services"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 1 10l1.2 1.6L4 10.3V21h16V10.3l1.8 1.3L23 10zm6 17H6V8.9l6-4.4 6 4.4z"/></svg>Services</span></a></li>
+    <li><a href="#process"><span class="ico"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>How it works</span></a></li>
+    <li><a href="#work"><span class="ico"><svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5z"/></svg>Our work</span></a></li>
+    <li><a href="#reviews"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 17.3 18.2 21l-1.6-7L22 9.2l-7.2-.6L12 2 9.2 8.6 2 9.2 7.5 14l-1.7 7z"/></svg>Reviews</span></a></li>
+    <li><a href="#areas"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Service area</span></a></li>
+  </ul>
+  <div class="d-ctas">
+    <a class="d-call" href="tel:+18015642068">Call</a>
+    <a class="d-quote" href="#quote">Free Quote</a>
+  </div>
 </nav>
 
 <main id="top">
@@ -378,6 +447,28 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
     <div class="hero-actions">
       <a class="btn btn-red reveal-3" href="#quote">Get a Free Quote</a>
       <a class="h-phone reveal-4" href="tel:+18015642068"><svg><use href="#ph"/></svg>(801) 564-2068</a>
+    </div>
+  </div>
+</section>
+
+<section class="honor" aria-label="Military, veteran and first responder discount">
+  <div class="wrap">
+    <div class="honor-card starry">
+      <div class="honor-top" aria-hidden="true">
+        <span class="hf"><span class="wave"></span></span>
+        <span class="honor-stars">&#9733;&#9733;&#9733;</span>
+        <span class="hf"><span class="wave"></span></span>
+      </div>
+      <p class="honor-kicker">Thank you for your service</p>
+      <h2 class="honor-h">You protected us.<br><span>Let us protect your home.</span></h2>
+      <p class="honor-p">Military, veterans and first responders: ask our roofers about your discount when you book a free estimate.</p>
+      <ul class="honor-who">
+        <li><svg viewBox="0 0 24 24"><path d="M12 2 9.2 8.6 2 9.2 7.5 14l-1.7 7L12 17.3 18.2 21l-1.6-7L22 9.2l-7.2-.6z"/></svg>Military</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 2h2v20H5zm3 1h12l-3 4.5L20 12H8z"/></svg>Veterans</li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5zm-1 6h2v4h4v2h-4v4h-2v-4H7v-2h4z"/></svg>First responders</li>
+      </ul>
+      <a class="btn btn-red honor-btn" href="tel:+18015642068"><svg><use href="#ph"/></svg>Ask about your discount</a>
+      <div class="flagband honor-band" aria-hidden="true"></div>
     </div>
   </div>
 </section>
@@ -576,6 +667,7 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
       <div class="q-flag"><i><span class="wave"></span></i>Ask about a military, veteran or first responder discount</div>
     </div>
     <form class="form" id="qform" novalidate>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);opacity:0;pointer-events:none">
       <h3>Request a free quote</h3>
       <p class="sub">Takes about 30 seconds.</p>
       <div class="fields">
@@ -596,7 +688,7 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
         <div><label for="fm">Anything we should know?</label><textarea id="fm" name="msg" placeholder="Optional"></textarea></div>
       </div>
       <button class="btn btn-red" type="submit">Send my request</button>
-      <p class="fine">Sends as a text message to SOS Roofing from your phone.</p>
+      <p class="fine">Goes straight to SOS Roofing. We never share your info.</p>
       <div class="done" id="qdone"></div>
     </form>
   </div>
@@ -620,7 +712,8 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
 
 <div class="bar" id="bar">
   <a class="b-call" href="tel:+18015642068"><svg><use href="#ph"/></svg>Call</a>
-  <a class="b-quote" href="#quote">Free Quote</a>
+  <a class="b-text" href="sms:+18015642068?&amp;body=Hi%20SOS%20Roofing%2C%20I%27d%20like%20a%20free%20roof%20estimate."><svg viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.6 1.4 4.9 3.6 6.5-.2 1.4-.9 2.7-2 3.6 2 .1 3.9-.6 5.4-1.8 1 .3 2 .4 3 .4 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/></svg>Text</a>
+  <a class="b-quote" href="#quote"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm-1 7V3.5L18.5 9zM8 13h8v2H8zm0 4h8v2H8z"/></svg>Free Quote</a>
 </div>
 
 <script>
@@ -646,6 +739,20 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
   };
   burger.addEventListener('click', () => toggle(!document.body.classList.contains('menu-open')));
   document.querySelectorAll('#drawer a').forEach(a => a.addEventListener('click', () => toggle(false)));
+  document.getElementById('scrim').addEventListener('click', () => toggle(false));
+  document.getElementById('dclose').addEventListener('click', () => toggle(false));
+
+  // Drag the sheet down to dismiss, like an iOS sheet
+  const drawer = document.getElementById('drawer');
+  let dy0 = null, dyNow = 0;
+  drawer.addEventListener('touchstart', e => { if (drawer.scrollTop <= 0) { dy0 = e.touches[0].clientY; dyNow = 0; drawer.style.transition = 'none'; } }, {passive:true});
+  drawer.addEventListener('touchmove', e => { if (dy0 === null) return; dyNow = Math.max(0, e.touches[0].clientY - dy0); drawer.style.transform = `translateY(${dyNow}px)`; }, {passive:true});
+  drawer.addEventListener('touchend', () => {
+    if (dy0 === null) return;
+    drawer.style.transition = ''; drawer.style.transform = '';
+    if (dyNow > 90) toggle(false);
+    dy0 = null;
+  });
 
   // Scroll-linked effects (all reversible)
   let ticking = false;
@@ -694,24 +801,53 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
   lb.querySelector('.next').onclick = e => { e.stopPropagation(); show(idx+1); };
   lb.addEventListener('click', e => { if (e.target === lb) close(); });
   addEventListener('keydown', e => { if (!lb.classList.contains('open')) return; if (e.key==='Escape') close(); if (e.key==='ArrowLeft') show(idx-1); if (e.key==='ArrowRight') show(idx+1); });
-  let sx = null;
-  lb.addEventListener('touchstart', e => sx = e.touches[0].clientX, {passive:true});
-  lb.addEventListener('touchend', e => { if (sx===null) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1)); sx = null; });
+  let sx = null, sy = null;
+  lb.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive:true});
+  lb.addEventListener('touchmove', e => { if (sy === null) return; const d = e.touches[0].clientY - sy; if (d > 0 && Math.abs(e.touches[0].clientX - sx) < 60) { lbImg.style.transform = `translateY(${d}px) scale(${1 - Math.min(d, 300) / 1500})`; lb.style.background = `rgba(5,10,20,${.94 - Math.min(d, 300) / 600})`; } }, {passive:true});
+  lb.addEventListener('touchend', e => {
+    if (sx === null) return;
+    const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    lbImg.style.transform = ''; lb.style.background = '';
+    if (dy > 110 && Math.abs(dx) < 60) close();
+    else if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+    sx = sy = null;
+  });
 
   // Quote form -> text message to the business
   const form = document.getElementById('qform'), done = document.getElementById('qdone');
-  form.addEventListener('submit', e => {
+  const QUOTE_EMAIL = 'steve@sosroofingutah.com';
+  const sendBtn = form.querySelector('button[type=submit]');
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const d = Object.fromEntries(new FormData(form));
+    if (d._honey) return;
     if (!d.name.trim() || !d.phone.trim()) { done.style.display='block'; done.style.background='#fdecec'; done.style.color='#8a1b22'; done.textContent='Please add your name and phone number.'; return; }
+    done.style.display='none'; done.style.background=''; done.style.color='';
+    sendBtn.disabled = true; const label = sendBtn.textContent; sendBtn.textContent = 'Sending…';
+    let ok = false;
+    try {
+      const r = await fetch('https://formsubmit.co/ajax/' + QUOTE_EMAIL, {
+        method:'POST', headers:{'Content-Type':'application/json', 'Accept':'application/json'},
+        body: JSON.stringify({_subject:`New quote request: ${d.name}`, _template:'table', _captcha:'false',
+          Name:d.name, Phone:d.phone, Address:d.address || '-', Service:d.service, Notes:d.msg || '-'})
+      });
+      const j = await r.json();
+      ok = r.ok && (j.success === true || j.success === 'true');
+    } catch (err) { ok = false; }
+    sendBtn.disabled = false; sendBtn.textContent = label;
+    done.style.display='block';
+    if (ok) {
+      form.reset();
+      done.textContent = `Got it, ${d.name.split(' ')[0]}! Your request went straight to SOS Roofing. Expect a call back soon.`;
+      return;
+    }
+    // Email didn't go through: fall back to a pre-filled text so the lead isn't lost
     const body = `Hi SOS Roofing, I'd like a free quote.\nName: ${d.name}\nPhone: ${d.phone}` + (d.address ? `\nAddress: ${d.address}` : '') + `\nNeed: ${d.service}` + (d.msg ? `\nNotes: ${d.msg}` : '');
-    const mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    done.style.display='block'; done.style.background=''; done.style.color='';
-    if (mobile) {
+    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
       location.href = 'sms:+18015642068?&body=' + encodeURIComponent(body);
       done.textContent = 'Your text app should open with everything filled in. Just hit send.';
     } else {
-      done.innerHTML = 'Thanks! The fastest way to reach us from a computer is a quick call: <a href="tel:+18015642068" style="color:inherit">(801) 564-2068</a>.';
+      done.innerHTML = 'Sorry, that didn\'t send. Please call us at <a href="tel:+18015642068" style="color:inherit">(801) 564-2068</a>.';
     }
   });
 
