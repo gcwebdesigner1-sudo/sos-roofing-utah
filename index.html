@@ -80,7 +80,12 @@ section{scroll-margin-top:64px}
 .menu-open .drawer{transform:none}
 .drawer a{color:#fff;text-decoration:none;font-family:var(--display);font-weight:800;font-size:40px;text-transform:uppercase;line-height:1.25;letter-spacing:.02em}
 .drawer a:active{color:var(--gold)}
-.drawer .d-call{margin-top:28px;font-family:var(--body);font-size:20px;font-weight:700;color:var(--gold)}
+.drawer > a{padding:2px 0}
+.d-ctas{display:grid;gap:12px;margin-top:30px}
+.drawer .d-quote,.drawer .d-call{font-family:var(--body);font-size:17px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;height:56px;border-radius:14px}
+.drawer .d-quote{background:var(--red);color:#fff}
+.drawer .d-call{background:#fff;color:var(--navy)}
+.drawer .d-flag{position:absolute;left:0;right:0;bottom:0}
 @media (min-width:960px){.links{display:flex}.burger,.drawer{display:none}}
 
 /* ---------- HERO ---------- */
@@ -267,6 +272,32 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
 .bar svg{width:18px;height:18px;fill:currentColor}
 @media (min-width:960px){.bar{display:none}}
 
+/* ---------- PHONE ---------- */
+.dots,.swipe-hint{display:none}
+@media (max-width:699px){
+  .pad{padding:64px 0}
+  .swipe{display:flex !important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 calc(var(--gutter) * -1);padding:4px var(--gutter) 10px;scroll-padding:0 var(--gutter);scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+  .swipe::-webkit-scrollbar{display:none}
+  .swipe::after{content:"";flex:0 0 1px}
+  .swipe > *{flex:0 0 86%;scroll-snap-align:start}
+  .svc{min-height:420px}
+  .svc h3{font-size:34px}
+  .svc p{font-size:16.5px}
+  .rv{padding:24px 22px}
+  .dots{display:flex;justify-content:center;gap:8px;margin-top:14px}
+  .dots i{display:block;width:8px;height:8px;border-radius:4px;background:#c3cde0;transition:width .3s,background .3s;cursor:pointer}
+  .dots i.on{width:26px;background:var(--red)}
+  .swipe-hint{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+  .svc-head{margin-bottom:22px}
+  .rv-top{margin-bottom:22px}
+  .lb .prev,.lb .next{top:auto;bottom:calc(28px + env(safe-area-inset-bottom));transform:none;width:56px;height:56px;background:rgba(255,255,255,.18)}
+  .lb .prev{left:calc(50% - 72px)}
+  .lb .next{right:calc(50% - 72px)}
+  .lb img{max-height:72vh}
+  .h-sos{font-size:clamp(112px,34vw,230px)}
+  .h-roof{font-size:clamp(38px,10.5vw,80px)}
+}
+
 /* ---------- FLAGS ---------- */
 .flagband{position:relative;height:28px;background:repeating-linear-gradient(180deg,var(--red) 0 4px,#fff 4px 8px)}
 .flagband::before{content:"";position:absolute;left:0;top:0;bottom:0;width:min(30%,260px);background:var(--navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='14'%3E%3Cpolygon fill='white' points='11,2 12.3,5.6 16,5.6 13,7.8 14.1,11.4 11,9.2 7.9,11.4 9,7.8 6,5.6 9.7,5.6'/%3E%3C/svg%3E") 0 0/22px 14px repeat}
@@ -319,15 +350,18 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
   </div>
 </header>
 
-<nav class="drawer" id="drawer" aria-label="Mobile">
+<nav class="drawer starry" id="drawer" aria-label="Mobile">
   <a href="#about">About</a>
   <a href="#services">Services</a>
   <a href="#process">Process</a>
   <a href="#work">Our Work</a>
   <a href="#reviews">Reviews</a>
   <a href="#areas">Service Area</a>
-  <a href="#quote">Free Quote</a>
-  <a class="d-call" href="tel:+18015642068">Call (801) 564-2068</a>
+  <div class="d-ctas">
+    <a class="d-quote" href="#quote">Get a Free Quote</a>
+    <a class="d-call" href="tel:+18015642068">Call (801) 564-2068</a>
+  </div>
+  <div class="flagband d-flag" aria-hidden="true"></div>
 </nav>
 
 <main id="top">
@@ -386,8 +420,9 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
       <span class="eyebrow">What we do</span>
       <h2>Roofing services</h2>
       <p class="lead">Residential roofing done right the first time, from a single leak to a full tear-off.</p>
+      <span class="swipe-hint">Swipe to see all 6 &rarr;</span>
     </div>
-    <div class="svc-grid">
+    <div class="svc-grid swipe">
       <article class="svc"><img src="img/home1.jpg" alt="" loading="lazy"><div><h3>Roof Replacement</h3><p>Full tear-off and new roof, usually finished in about two days.</p></div></article>
       <article class="svc"><img src="img/ridge.jpg" alt="" loading="lazy"><div><h3>Roof Repair</h3><p>Leaks, missing shingles, flashing and vents fixed before they turn into water damage.</p></div></article>
       <article class="svc"><img src="img/tearoff.jpg" alt="" loading="lazy"><div><h3>Insurance Claims</h3><p>We document the damage and work with your adjuster so you aren't stuck sorting it out alone.</p></div></article>
@@ -395,6 +430,7 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
       <article class="svc"><img src="img/dark.jpg" alt="" loading="lazy"><div><h3>Roof Inspections</h3><p>An honest look at what your roof needs, and what it doesn't.</p></div></article>
       <article class="svc"><img src="img/flat2.jpg" alt="" loading="lazy"><div><h3>Flat &amp; Low-Slope</h3><p>Clean, sealed membrane roofs for porches, additions and low-pitch homes.</p></div></article>
     </div>
+    <div class="dots" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -459,8 +495,9 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
         <b>5.0</b>
         <div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><small>34 reviews on Google</small></div>
       </a>
+      <span class="swipe-hint">Swipe for more reviews &rarr;</span>
     </div>
-    <div class="rv-grid">
+    <div class="rv-grid swipe">
       <blockquote class="rv">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <q>SOS roofing is top notch and we highly recommend! We recently got our roof completely done by Steve and his guys. Steve was prompt, efficient, and provided exceptional customer service. He went above and beyond to accommodate my request for a skylight in replace of our swamp cooler. His guys did a quality job on the roof and it looks amazing!!</q>
@@ -487,6 +524,7 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
         <footer>Nick P. <span>Google</span></footer>
       </blockquote>
     </div>
+    <div class="dots" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -675,6 +713,24 @@ footer.site{background-color:#06214a;color:rgba(255,255,255,.7);padding:46px 0 1
     } else {
       done.innerHTML = 'Thanks! The fastest way to reach us from a computer is a quick call: <a href="tel:+18015642068" style="color:inherit">(801) 564-2068</a>.';
     }
+  });
+
+  // Swipe rows (phone): dot indicators
+  document.querySelectorAll('.swipe').forEach(s => {
+    const d = s.nextElementSibling;
+    if (!d || !d.classList.contains('dots')) return;
+    const items = [...s.children];
+    d.innerHTML = items.map(() => '<i></i>').join('');
+    const dots = [...d.children];
+    const step = () => items[0].offsetWidth + 12;
+    const upd = () => {
+      const atEnd = s.scrollLeft >= s.scrollWidth - s.clientWidth - 4;
+      const i = atEnd ? items.length - 1 : Math.round(s.scrollLeft / step());
+      dots.forEach((x, j) => x.classList.toggle('on', j === i));
+    };
+    s.addEventListener('scroll', () => requestAnimationFrame(upd), {passive:true});
+    dots.forEach((x, j) => x.addEventListener('click', () => s.scrollTo({left: j * step(), behavior: 'smooth'})));
+    upd();
   });
 })();
 </script>
